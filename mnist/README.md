@@ -39,7 +39,7 @@ source .venv/bin/activate
 4. Run the script:
 
 ```bash
-python src/mnist/main.py
+python src/mnist/train.py
 ```
 
 ## License
