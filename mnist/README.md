@@ -7,14 +7,8 @@
 
 ## Table of Contents
 
-- [Installation](#installation)
+
 - [License](#license)
-
-## Installation
-
-```console
-pip install mnist
-```
 
 # MNIST Digit Classification
 
@@ -36,7 +30,7 @@ pip install -r requirements.txt
 ```
 
 3. Create virtual environment
-    
+
 ```bash
 python -m venv .venv
 source .venv/bin/activate
