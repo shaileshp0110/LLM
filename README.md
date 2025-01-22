@@ -22,18 +22,17 @@ Simple neural network for MNIST digit classification using PyTorch.
 git clone https://github.com/mineme0110/mnist.git
 cd mnist
 ```
-
-2. Install the dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-3. Create virtual environment
+2. Create virtual environment
 
 ```bash
 python -m venv .venv
 source .venv/bin/activate
+```
+
+3. Install the dependencies:
+
+```bash
+pip install -r requirements.txt
 ```
 
 4. Run the script:
