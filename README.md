@@ -12,6 +12,9 @@
   - [MNIST Digit Classification](#mnist-digit-classification)
   - [Logistic Regression](#logistic-regression)
   - [Content-Based Filtering](#content-based-filtering)
+  - [Fraud Detection](#fraud-detection)
+    - [Simple Model](#simple-model)
+    - [Realistic Model](#realistic-model)
 - [License](#license)
 
 ## Setup
@@ -97,6 +100,71 @@ Recommended Movies:
 2. The Matrix
    Genres: Action, Sci-Fi
    Similarity Score: 0.7856
+```
+
+### Fraud Detection
+
+XGBoost-based fraud detection system for identifying fraudulent transactions.
+
+Prerequisites for Mac users:
+```bash
+# Install OpenMP library (required for XGBoost)
+brew install libomp
+```
+
+#### Simple Model
+A basic fraud detection model with clear separation between normal and fraudulent transactions.
+
+1. Install dependencies:
+```bash
+pip install -r src/fraud-detection/requirements.txt
+```
+
+2. Run the simple fraud detection model:
+```bash
+python src/fraud-detection/train_simple.py
+```
+
+Features:
+- Clear separation between classes
+- Basic XGBoost parameters
+- Perfect for understanding basic fraud detection concepts
+- Shows idealized probability distributions
+
+#### Realistic Model
+A more sophisticated model that better represents real-world fraud detection scenarios.
+
+1. Install dependencies (if not already installed):
+```bash
+pip install -r src/fraud-detection/requirements.txt
+```
+
+2. Run the realistic fraud detection model:
+```bash
+python src/fraud-detection/train_realistic.py
+```
+
+Features:
+- Handles imbalanced classes
+- Uses realistic transaction patterns:
+  - Transaction amounts
+  - Time of day patterns
+  - Geographic distances
+  - Transaction frequency
+- Early stopping and validation
+- Feature importance analysis
+- More representative probability distributions
+
+Example output:
+```
+Realistic Model Performance:
+ROC AUC Score: 0.9985
+Top 5 Most Important Features:
+transaction_amount: 0.4532
+time_of_day: 0.2876
+distance_from_last: 0.1543
+transaction_frequency: 0.0892
+feature_5: 0.0157
 ```
 
 ## License
