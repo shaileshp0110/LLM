@@ -13,9 +13,19 @@
   - [Logistic Regression](#logistic-regression)
   - [Content-Based Filtering](#content-based-filtering)
   - [Fraud Detection](#fraud-detection)
-    - [Simple Model](#simple-model)
-    - [Realistic Model](#realistic-model)
+  - [Patient Clustering](#patient-clustering)
+  - [Sentiment Analysis](#sentiment-analysis)
 - [License](#license)
+
+## Project Structure
+```
+src/
+├── clustering/          # Patient clustering analysis
+├── fraud-detection/     # Fraud detection models
+├── sentiment_analysis/  # Text sentiment analysis
+├── mnist/              # MNIST digit classification
+└── logistic-regression/ # Binary classification
+```
 
 ## Setup
 
@@ -34,6 +44,89 @@ source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 ```
 
 ## Models
+
+### Patient Clustering
+
+Unsupervised learning for patient segmentation based on health metrics.
+
+1. Install dependencies:
+
+```bash
+pip install -r src/clustering/requirements.txt
+```
+
+2. Run clustering analysis:
+
+```bash
+python src/clustering/train.py
+```
+
+Features:
+- Multiple clustering algorithms:
+  - K-means: Groups patients into k clusters
+  - DBSCAN: Density-based clustering
+  - Hierarchical: Creates cluster hierarchy
+- Health metrics analyzed:
+  - Age
+  - BMI
+  - Blood Pressure
+  - Glucose Level
+  - Cholesterol
+  - Heart Rate
+- Evaluation metrics:
+  - Silhouette Score
+  - Calinski-Harabasz Score
+- Visualizations:
+  - 2D cluster plots
+  - Feature distributions
+
+Example output:
+```
+Training KMEANS clustering...
+
+Clustering Results:
+Number of clusters: 3
+Silhouette Score: 0.303
+Calinski-Harabasz Score: 543.462
+
+Cluster Characteristics:
+Cluster 0 (Young, Healthy):
+- Age: ~25 years
+- BMI: ~22
+- Blood Pressure: ~110
+
+Cluster 1 (Middle-aged):
+- Age: ~45 years
+- BMI: ~28
+- Blood Pressure: ~130
+
+Cluster 2 (Elderly):
+- Age: ~70 years
+- BMI: ~26
+- Blood Pressure: ~145
+```
+
+### Sentiment Analysis
+
+Text classification for sentiment analysis of movie reviews.
+
+1. Install dependencies:
+
+```bash
+pip install -r src/sentiment_analysis/requirements.txt
+```
+
+2. Train the model:
+
+```bash
+python src/sentiment_analysis/train.py
+```
+
+3. Interactive testing:
+
+```bash
+python src/sentiment_analysis/interactive_test.py
+```
 
 ### MNIST Digit Classification
 
@@ -170,3 +263,5 @@ feature_5: 0.0157
 ## License
 
 This project is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
+
+## Project Structure
