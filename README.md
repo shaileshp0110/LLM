@@ -11,6 +11,7 @@
 - [Models](#models)
   - [MNIST Digit Classification](#mnist-digit-classification)
   - [Logistic Regression](#logistic-regression)
+  - [Linear Regression](#linear-regression)
   - [Content-Based Filtering](#content-based-filtering)
   - [Fraud Detection](#fraud-detection)
   - [Patient Clustering](#patient-clustering)
@@ -35,8 +36,8 @@ src/
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/mineme0110/mnist.git
-cd mnist
+git clone https://github.com/mineme0110/ml.git
+cd ml
 ```
 
 2. Create virtual environment:
