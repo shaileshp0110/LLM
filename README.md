@@ -24,7 +24,10 @@ src/
 ├── fraud-detection/     # Fraud detection models
 ├── sentiment_analysis/  # Text sentiment analysis
 ├── mnist/              # MNIST digit classification
-└── logistic-regression/ # Binary classification
+├── logistic-regression/ # Binary classification
+├── linear-regression/   # Linear regression
+├── content-based-filtering/ # Content-based filtering
+└── requirements.txt     # Dependencies
 ```
 
 ## Setup
