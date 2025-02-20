@@ -16,6 +16,7 @@
   - [Fraud Detection](#fraud-detection)
   - [Patient Clustering](#patient-clustering)
   - [Sentiment Analysis](#sentiment-analysis)
+  - [Vanishing Gradient Problem](#vanishing-gradient-problem)
 - [License](#license)
 
 ## Project Structure
@@ -28,6 +29,7 @@ src/
 ├── logistic-regression/ # Binary classification
 ├── linear-regression/   # Linear regression
 ├── content-based-filtering/ # Content-based filtering
+├── vanishing-gradient/  # Vanishing gradient examples
 └── requirements.txt     # Dependencies
 ```
 
@@ -164,7 +166,23 @@ pip install -r src/logistic-regression/requirements.txt
 python src/logistic-regression/train.py
 ```
 
-This will demonstrate logistic regression on a generated dataset with visualization of the decision boundary.
+### Linear Regression
+
+Linear regression example using scikit-learn's Linear Regression.
+
+1. Install dependencies:
+
+```bash
+pip install -r src/linear-regression/requirements.txt
+```
+
+2. Run the training script:
+
+```bash
+python src/linear-regression/train.py
+```
+
+This will demonstrate linear regression on a generated dataset with visualization of the regression line.
 
 ### Content-Based Filtering
 
@@ -262,6 +280,48 @@ time_of_day: 0.2876
 distance_from_last: 0.1543
 transaction_frequency: 0.0892
 feature_5: 0.0157
+```
+
+### Vanishing Gradient Problem
+
+Demonstrates the vanishing gradient problem in deep neural networks and solutions.
+
+1. Install dependencies:
+```bash
+pip install -r src/vanishing-gradient/requirements.txt
+```
+
+2. Run the demonstration:
+```bash
+python src/vanishing-gradient/train.py
+```
+
+Features:
+- Demonstrates vanishing gradients in deep networks
+- Implements multiple solutions:
+  - ReLU activation
+  - Batch Normalization
+  - Residual connections (ResNet-style)
+  - LSTM gates
+- Visualizations:
+  - Gradient flow analysis
+  - Training metrics comparison
+  - Activation distributions
+
+Example output:
+```
+Training Deep Network...
+
+Standard Network (with Sigmoid):
+Epoch 10 - Loss: 2.345 - Gradient Norm: 0.00023 (Vanishing!)
+
+Solutions Comparison:
+ReLU Network:
+- Loss: 0.456 - Gradient Norm: 0.0892
+BatchNorm Network:
+- Loss: 0.234 - Gradient Norm: 0.1234
+ResNet Style:
+- Loss: 0.123 - Gradient Norm: 0.2345
 ```
 
 ## License
